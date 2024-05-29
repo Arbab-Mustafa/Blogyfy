@@ -1,0 +1,51 @@
+<ul class="nav  justify-content-center  ">
+  <li class="nav-item">
+    <a class="nav-link " aria-current="page" href="/">Blogify</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/">Home</a>
+  </li>
+  <!--  -->
+  <% if (locals.user) { %>
+    <li class="nav-item">
+      <a class="nav-link" href="/blog/add-new-blog">Add Blog</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Arbab
+        Mustafa</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Setting</a></li>
+        <li><a class="dropdown-item" href="/user/logout">Logout</a></li>
+
+
+      </ul>
+    </li>
+    <% } else{ %>
+      <li class="nav-item">
+        <a class="nav-link" href="/user/signup">Create Account</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/user/signin">SignIn</a>
+      </li>
+
+
+
+
+      <% } %>
+
+
+
+
+</ul>
+
+
+<% if (locals.error) { %>
+  <div class="container mt-3">
+
+    <div class="alert alert-danger" role="alert">
+      <%= locals.error %>
+    </div>
+  </div>
+
+
+  <% } %>

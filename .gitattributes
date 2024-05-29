@@ -1,0 +1,3 @@
+ # Ignore line ending changes for specific files
+package-lock.json -text
+package.json -text
